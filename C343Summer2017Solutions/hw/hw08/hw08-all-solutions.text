@@ -1,0 +1,34 @@
+CSCI C343 - Homework 08 - Summer 2017
+-------------------------------------
+
+
+Task A
+------
+
+For questions A1 and A2, please see "hw08-solutions-A1-A2.png"
+
+Note:
+in the sample solutions in "hw08-solutions-A1-A2.png",
+edge weights are included. This is optional for Homework 08
+solutions: you may omit edge weights, or use "1"
+to represent each existing edge.
+
+
+Question A3: The adjacency matrix requires 36*1 = 36 bytes,
+and additionally at most 2 * 6 * 2 to (separately) represent node labels.
+The adjacency list requires 24*4 + 18*2 = 132 bytes.
+In this case, the adjacency matrix is considerably more efficient.
+
+
+For questions A5 and A6, please see "hw08-solutions-A5-A6.png"
+
+
+
+Task B
+------
+
+For a Java implementation of the Queue-based topological sort algorithm,
+please see the textbook's sample code solution at:
+
+http://people.cs.vt.edu/shaffer/Book/JAVA/progs/Grtopbm/GraphTest.java
+

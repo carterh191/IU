@@ -1,0 +1,109 @@
+Homework 04 Task A
+------------------
+
+
+
+*** textbook exercise 5.14 ***
+
+  Q: "Why is the BST Property defined so that nodes with values equal
+  to the value of the root appear only in the right subtree, rather
+  than allow equal-valued nodes to appear in either subtree?"
+
+  A: If equal-valued nodes were allowed to appear in either subtree,
+  then the search operation would need to check both left and right
+  subtrees, instead of just one of them.
+
+
+
+*** textbook exercise 5.15 ***
+
+(a)
+
+   Q: The BST that results from inserting the values
+      15, 20, 25, 18, 16, 5, 7 (in that order)
+   A:
+        __15__
+       /      \
+      5        20
+       \      /  \
+        7   18    25
+           /
+         16
+
+
+(b)
+
+   Q: Enumerations for the tree above
+   A: preorder:   15  5  7 20 18 16 25
+      inorder:     5  7 15 16 18 20 25
+      postorder:   7  5 16 18 25 20 15
+
+
+
+*** textbook exercise 5.24 ***
+
+   
+   Q: "Where in a max-heap might the smallest element reside?"
+
+   A: the smallest element is in one of the leaf nodes, because the
+   max heap property requires that the parents are greater than the
+   children.
+
+
+
+*** textbook exercise 5.32 ***
+
+
+(a) An array-based list of unsorted records.
+
+    Since records are guaranteed to arrive already sorted from lowest
+    to highest, insert operations can be done by adding items to the
+    end of the array, using constant time, i.e. O(1).
+    There's no need for the data structure to provide sort order,
+    since records already arrive sorted (as long as insert doesn't
+    change the arrival order, it's fine in this particular case).
+    Search can be done using a binary search in O(log n) time.
+
+
+(b) A linked list of unsorted records.
+
+    Since there will be few searches, it is important to select a data
+    structure that allows efficient insert. Using an array-based list,
+    on the other hand, runs the risk of wasting space on empty slots.
+    Insert can be done in constant time (items are added to the tail
+    of the list).
+    Search can be done using a sequential search algorithm.
+
+
+(c) A BST tree.
+
+    Since the tasks involve the same number of insert & search, it is
+    important to select a data structure that supports both operations
+    efficiently. BST provides both in O(log n) time.
+
+
+(d) A BST tree.
+
+    Since a balanced BST tree supports search in O(log n) time.
+    A list maintained in sorted order would also work OK, since the
+    prevalent operation in this scenario is search (1000x more search
+    operations than insert operations!)
+
+
+
+*** Huffman coding for genome compression ***
+
+    Assuming a genome with 50 "A"s, 35 "T"s, 10 "C"s and 5 "G"s.
+    The length in bits of the genome encoded using Huffman codes, i.e.
+    the compressed size, is:
+
+    50 x 1 + 35 x 2 + 10 x 3 + 5 x 3 = 165
+
+    The length in bits of the message encoded using fixed length
+    codes, i.e. the uncompressed size, is: 
+
+    100 x 2 = 200
+
+    The compression ratio is therefore:
+
+    200 / 165 = 1.2

@@ -1,0 +1,18 @@
+Homework 01 Task B - Time Complexity analysis 
+
+
+a) Theta( 1 )
+
+b) Theta( n )
+
+c) Theta( n^2 )  (where n^2 == "n to the power of 2")
+
+d) Theta( n^2 )
+
+e) Theta( n log(n) )
+
+f) Theta( n log(n) )
+
+g) Theta( n^2 log(n) )
+
+h) Theta( n^2 )

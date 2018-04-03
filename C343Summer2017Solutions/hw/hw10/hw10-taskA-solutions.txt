@@ -1,0 +1,17 @@
+C343 Summer 2017 Homework 10 sample solutions:
+
+
+Task A
+------
+
+A.1
+
+The single-destination shortest-paths problem can be solved with the following algorithm:
+* transform the problem to a single-source shortest-paths problem: reverse the direction of all edges (e.g. A->B would become B->A) 
+* apply Dijkstra's single-source shortest path algorithm to the transformed graph
+* the results from Dijkstra's single-source shortest path algorithm for the transformed graph are the same paths that also solve the single-destination shortest-paths problem for the original graph.
+
+A.2
+
+The collection of edges selected by Dijkstra's algorithm form a spanning tree: they're a tree that is formed by a subset of all edges in the graph, and they cover all nodes in the graph.
+They may or may not form an MST, since there's no guarantee that the total sum of all edges' weights is the minimum of all such sums on the graph.
