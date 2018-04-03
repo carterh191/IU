@@ -1,0 +1,77 @@
+13.5
+
+		37
+a)
+	   24         42
+
+       7      32   40    42
+
+    2            39         120
+
+
+b)		37
+
+	   24         42
+
+       7      32   40    120
+
+    2                 42    300
+
+c)		37
+
+	   24         42
+
+       7      32   40    50
+
+    2                  42    120
+
+d)		37
+
+	   24         42
+
+       2      32   40    42
+
+    1    7                   120
+
+
+7.1
+
+-The basis case consists of a single element, and by definition a one-element array is completely sorted.
+-assume that the first n-1 elements of array A are completely sorted after n-1 iterations of insertion sort.
+-To insert one last element x to A, we find where it goes, namely the unique spot between the biggest element less than or equal to x and the smallest element greater than x.
+
+7.6
+Stable:
+insertion-does not change the relative order of elements with equal keys
+bubble-does not change the relative order of elements with equal keys
+merge-implementation preserves the input order of equal elements in the sorted output
+radix-Group the keys based on that digit, but otherwise keep the original order of keys
+bin-bin sort is stable,
+if the underlying sort is also stable, as equal keys are inserted in order to each
+bin
+
+Not Stable:
+selection- each element of the array store a pointer to a record rather than store the
+record  itself.   In  this  implementation,  a  swap  operation  need  only  exchange  the pointer values; the records themselves do not move
+shell- Break the list into sublists, sort them, then recombine
+the sublists.  Shellsort breaks the array of elements into “virtual” sublists
+quick- permutation differences among same elements depends on algorithm for picking pivot
+heap-operations on the heap can change the relative order of equal items. 
+
+
+7.11
+static <E extends Comparable<? super E>>
+void qsort(E[] A, int i, int j) {      // Quicksort
+	int pivotindex = findpivot(A, i, j); // Pick a pivot
+	DSutil.swap(A, pivotindex, j);       // Stick pivot at end
+	// k will be the first position in the right subarray
+	int k = partition(A, i-1, j, A[j]);
+	DSutil.swap(A, k, j);              // Put pivot in place
+	if ((k-i) > 1) qsort(A, i, k-1);   // Sort left partition
+	if ((j-k) > 1) qsort(A, k+1, j);   // Sort right partition
+}
+
+16.1 TOH.java
+
+7.5
+

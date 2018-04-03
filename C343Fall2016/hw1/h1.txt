@@ -1,0 +1,44 @@
+1.8 
+First we would need the list and items we are looking for and returns a value. if the value is false that means it failed and the value isn't in the list. If it is found we return and print what was found.
+
+2.2
+a)The sum of 2 integers is even if both integers are odd or if both are even. if a is odd, then b is also odd, and if a is even, b is also even due to rule of symmestry 
+d)A rational number is a number that can be represented as a fraction m/n, where m and n are integers and n?0. Every integer is a rational number, since each integer n can be written in the form n/1.
+
+2.3
+a)it is not a partial ordering. It is neither reflexive, symmetric, antisymmetric or transitive.
+b) IsAncestorOf on set of all humans is a partial order due to if A was and ancestor of b and b was an ancestor of c, then a is an ancestor of c.
+c)isSisterOf is not a partial order. isSisterOf
+are not symmetric:  for example, the term ‘RobertIsBrotherOfMary’ is true, but MaryIsBrotherOfRobert is false 
+e)not a partial order becasue (a,a) is not a set of (a,b)
+f)its a partial ordering becasue (2,1)(1,3)(2,3) can be found in the set (1,2,3)
+
+2.5
+submitted to git as Int2DArray2
+
+2.15
+
+2.19
+a) n^2 - n is even
+step 1: n = 1
+1^2 -1 =0
+step 2: n = 2
+2^2 - 2=2
+step3: n = 3
+3^3 -3 =24
+this statment is valid
+
+b)For every even or odd number that = n n^2 - n is always even.
+c)For n=1, n3-n=1-1 which is divisible by 3
+(n+1)3-(n+1)=n3+3n3+3n+1-n-1=(n3-n)+3(n2+n)
+which is n3-n plus a multiple of 3. Since we assumed that n3-n was a multiple of 3, it follows that (+1)3-(n+1) is also a multiple of 3
+d)(n+1)5=1+5n+10n2+10n3+5n4+n5
+(n+1)5-(n+1)=4n+10n2+10n3+5n4+n5
+(n+1)5-(n+1)-(n5-n)=5n+10n2+10n3+5n4=5(n+2n2+2n3+n4)
+this statment hold true.
+
+2.30
+for all odd positive integersn,n2+nis divisible by 2”
+for all positive integersn, 2n=n”
+
+4.7

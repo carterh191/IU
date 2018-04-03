@@ -1,0 +1,90 @@
+3.8
+a) if c=c1 n0=1 
+  for all n>n0    c1n<=cn
+                  c1n>=cn
+
+b)c2n^3<= c2n^3+c3<=(c2 +c3)n^3
+if c3 <0, c2n^3 + c3 <=c2n^3, for all n
+
+cn^3<= c2n^3 +c3,  and let t(n)=c2n^3 -c4
+
+3.10
+a) False, constant factors are usually ignored, which means that O(n^2) == O(k*n^2) == k*O(n^2) == (k^k)*O(n^2) for any constant value k
+b) True, n^2 is in Omega(3 n^2 + n log n). 3 n^2 + n log n  is in O(n^2)
+
+3.12
+a)theta(1)
+b)theta(n)
+c)theta(n^2)
+d)Theta(n^2)
+e)theta(nlogn)
+f)theta(nlogn)
+g)theta(n^2logn)
+h)theta(n^2)
+
+3.13
+For any function f(n), we clearly have f(n) = T(f(n)), because
+1 f(n) = f(n) = 1 f(n) for all n. 
+
+
+5.2
+Base case: If P is a binary tree with 1 node, then P consists of a single leaf, and no other nodes.  So l(P) = d(P)+1
+
+Induction hypothesis: Assume n(0) is a positive integer with property that if P
+is any binary tree with n = n0(≥ 1) nodes, then l(P) = d(P)+ 1.
+
+Induction: Assume that P is a binary tree with n = n0 + 1 ≥ 2 nodes. P has a leaf L. if by deleting L from P, we get a new tree P0 with n = n0 ≥ 1
+nodes. So by the induction hypothesis, l(P') = d(P')+1
+
+case 1 L has no sibling in P, and
+case 2 L has a sibling in P
+
+Since P has at least two nodes, L isnt the root of P, and then L has a parent P in P. In case 1, P has degree1 in P, and then it's a leaf of P'. Then l(P) = (P')+1 and
+d(P) = d(P'), so in This instance we have l(P) = d(P) + 1.
+
+In case 2, P has degree 2 in P, and degree 1 in P^'. Then l(P) = l(P')+1 and d(P)=d(P')+1. So by the induction hypothesis, l(P)=l(P')+1=d(P')+1+1=d(P)+1
+
+
+
+
+5.15
+
+A)             15
+	|		|
+	5		20
+	   |	     |	    |
+	   7	     18     25
+		    |
+		    16
+
+B)
+Pre-orden: 15-5-7-20-18-16-25 
+In-orden: 5-7-15-16-18-20-25 
+Post-orden: 7-5-16-18-25-20-15 
+
+5.17
+
+				120
+			|
+			42
+		|		|
+		7		42
+	     |     |
+	     2     32
+		  |   |
+		  24  37
+                         |
+                        40
+
+AFTER:
+	120
+			|
+			42
+		|		|
+		2		42
+	           |
+	           32
+		  |   |
+		  24  37
+                         |
+                        40

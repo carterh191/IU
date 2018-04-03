@@ -1,0 +1,56 @@
+9.13
+A)
+The evaluation of the hash function contains an integer division and this will return an integer and delete the remainder. This maps a contiguous set of n values into the same set. When randomly selected, the data will run into a large amount of errors from collisions, slowing the run time.
+
+B)
+The evaluation of the hash function is very simple, and is the int 1. This is not an acceptable hash function and will cause many collisions. This is not a good hash function.
+
+C) 
+The evaluation of the hash function is fairly simple. K will be added to a random int within parameters and modified by n. This is an acceptable hash function, but has the potential to run slowly due to collisions. This is not a good hash function.
+
+D)
+The evaluation of the hash function contains an integer modification by n, where n is a prime number. This is a fine hash function and should run smoothly.
+
+
+9.16
+79 12 3 2 44             9
+|     |   |   |   |   |   |   |   |   |
+0    1 2  3  4  5  6  7  8  9 
+ probability-   2  4  3     1            
+
+
+9.19
+void hashInsert(Key k, E r) {
+  int home;
+  int pos = home = h(k);position
+  for (int i=1; HT[pos] != null; i++) {
+    pos = (home + p(k, i)) % M;
+    assert HT[pos].key().compareTo(k) != 0:
+           delete.Key(k);
+  }
+  HT[pos] = new KVpair<Key,E>(k, r);
+
+
+E hashSearch(Key k) {
+  int home;
+  int pos = home = h(k); 
+  for (int i = 1; (HT[pos] != null) &&
+                  (HT[pos].key().compareTo(k) != 0); i++)
+    pos = (home + p(k, i)) % M;
+  if (HT[pos] == null) return null;
+  else return HT[pos].value(); 
+}
+
+13.1
+42,12,100,10,50,31,7,11,99
+
+					/\
+				    0  1(100)
+                       /\   
+			       0    1
+				 / \      \ 
+				0 1(12) /   \  
+			    /\    \ 0(50) 1(99)
+			   0  1(11)/\
+                 / \    0(31)1(42)
+               0(7) 1(10)
