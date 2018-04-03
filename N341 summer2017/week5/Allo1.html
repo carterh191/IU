@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- 
+Filename: Allo1.html
+Written by: Harrison Carter
+Purpose: jQuery Development Environment Setup
+Date: 06/09/17
+ORIGINALLY CREATED ON: 06/9/2017
+LAST MODIFIED ON: 06/10/2017
+LAST MODIFIED BY: Harrison Carter
+ -->
+
+<html lang="en">
+<head>
+<title>jQuery Development Environment Setup</title>
+        <meta charset="utf-8">
+        <!-- 
+<!~~ Link to some stylesheet goes first ~~>
+        
+		<!~~ Link to hosted jQuery library goes after css file but before local js file ~~>
+        <!~~ Probable performance boost if at very bottom of file ~~>
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="allo1.js"></script>
+
+<!-- 
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append(" <b>Ahoy jQuery World!</b>.");
+        });
+        $("#btn2").click(function(){
+        $("p").html("<b>Everyone walk ye plank!</b>");
+    }); 
+});
+</script>
+ -->
+</head>
+<body>
+		<p>
+        	Keep a weather eye open matey!
+        </p>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Set HTML</button>
+
+</body>
+</html>

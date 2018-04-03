@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+TITLE: Course Page
+AUTHOR: Harrison Carter
+PURPOSE: create vars and conversions
+NOTE: Based on template provided by instructor
+ORIGINALLY CREATED ON: 05/19/2017
+LAST MODIFIED ON: 05/19/2017
+LAST MODIFIED BY: Harrison Carter
+MODIFICATION HISTORY: 
+05/19/2017: Create date
+ -->
+ 
+ 
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="simple.css">
+   <meta charset="utf-8">
+   <title>Conversions</title>
+   <link rel="stylesheet" href="simple.css">
+</head>
+
+
+
+<script>
+var strName = "";
+var strQuestion = "What is your name?";
+var strDefault = "Captain White Beard";
+strName = prompt(strQuestion, strDefault);
+
+var strOutput = "";
+var strname = "Jack";
+var strGreeting = "Goodmorning ";
+strOutput = strGreeting + strName;
+alert(strOutput);
+
+var strName = "";
+var strQuestion1 = "How many gold doubloons did you plunder?";
+var strDefault1 = "17";
+strName = prompt(strQuestion1, strDefault1);
+
+var strNumber = strDefault1;
+var strNewNumber = strDefault1;
+var intNumber;
+var intNewNumber;
+
+
+intNumber = parseInt(strNumber);
+intNewNumber = intNumber * 287;
+strNewNumber = intNewNumber.toString();
+alert("You gold doubloons are worth " + strNewNumber);
+  
+</script
+
+
+
+</html>

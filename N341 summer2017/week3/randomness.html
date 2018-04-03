@@ -1,0 +1,96 @@
+<!doctype html>
+<!--
+TITLE: randomness
+AUTHOR: Harrison Carter
+PURPOSE: Explore the math object and random number generation
+
+ORIGINALLY CREATED ON: 05/26/2017
+LAST MODIFIED ON: 05/26/2017
+LAST MODIFIED BY: Harrison Carter
+MODIFICATION HISTORY: 
+05/26/2017: Create date
+ -->
+ 
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Randomness</title>
+  </head>
+
+  <body>
+      <h1>Captain Peg Leg Random number Game</h1>
+<p id="guesses"></p>
+<p id="lastResult"></p>
+<p id="lowOrHi"></p>
+
+<div class="form">
+  <label for="guessField">Enter your guess: </label><input type="text" id="guessField">
+  <button id="guessSubmit">Enter Guess</button>
+</div>
+
+<script>
+function alertpositive(){
+alert("Hello Mates! This is captain Peg Leg."); //1st alert
+alert("I am thinking of ye number from 1 to 10"); //2nd alert
+alert("Guess right and you win me Grog"); //3nd alert
+}
+alertpositive(); //calls all alert messages
+
+<!-- var strName = ""; -->
+<!-- var strGuest1 = "What is your name?"; -->
+<!-- var strGuess1 = "Pick a number"; -->
+<!-- strName = prompt(strGuess1, strDefault1); -->
+
+<!-- var strName = ""; -->
+<!-- var strGuest2 = "What is your name?"; -->
+<!-- var strGuess2 = "Pick a number"; -->
+<!-- strName = prompt(strGuess2, strDefault2); -->
+
+<!-- var strName = ""; -->
+<!-- var strGuest3 = "What is your name?"; -->
+<!-- var strGuess3 = "Pick a number"; -->
+<!-- strName = prompt(strGuess3, strDefault3); -->
+
+
+var randomNumber = Math.floor(Math.random() * 10) + 1;//picks a random number 1-10
+var guesses = document.getElementById("guesses");
+var lastResult = document.getElementById("lastResult");
+var lowOrHi = document.getElementById("lowOrHi");
+var guessSubmit = document.getElementById("guessSubmit");
+var guessField = document.getElementById("guessField");
+var guessCount = 1;//
+
+<!-- var guessSubmit1 = document.getElementById("guessSubmit"); -->
+<!-- var guessField1 = document.getElementById("guessField"); -->
+<!-- var guessCount1 = 1; --> guest #2, not sure how to incorporate 3 guests
+
+function checkGuess() {
+  var userGuess = Number(guessField.value);
+  guesses.innerHTML += userGuess + " ";
+  if(guessCount == 3) {//3 changes to guess right or game is over
+    lastResult.innerHTML = "You lose, ye Grog is MINE!";
+  } else {
+    
+    if(userGuess == randomNumber) {
+      lastResult.innerHTML = "Congratulations! You got it right! here is me grog";
+      lowOrHi.innerHTML = "";
+      disableForm();
+    } else {
+      lastResult.innerHTML = "Wrong!";
+      if(userGuess < randomNumber) {
+        lowOrHi.innerHTML = "Your guess is too low!";
+      } else if(userGuess > randomNumber) {
+        lowOrHi.innerHTML = "Your guess is too high!";
+      }
+    }
+    guessCount++;
+    guessField.value = "";
+  }
+}
+guessSubmit.onclick = checkGuess;
+ </script>
+  </body>
+
+ 
+ 
+</html>

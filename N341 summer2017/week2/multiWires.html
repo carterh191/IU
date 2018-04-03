@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+ Filename: multiWires.html
+ Written by: Harrison Carter
+ Purpose: explore document.write, textConent, and innner html
+ Date: 19 May 2017
+ Modification History:
+ Original Build
+-->
+
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="simple.css">
+   <meta charset="utf-8">
+   <title>MultiWires</title>
+   <link rel="stylesheet" href="simple.css">
+</head>
+
+<body>
+	
+	<script>document.write('<h3>My name be First Mate Harrison Carter. Tread ye waters carefully!</h3>');
+	</script>
+
+<!-- creates a button for my .textContent -->
+<p id="major" onclick="myFunction()">Click here to find ye major out?.</p>
+
+<script>
+
+<!-- initialize var as my string and and re maps it to say my major -->
+var strMessage = "text we are wrtie";
+var elOutput = document.getElementById("myFav");
+elOutput.textConent = strMessage;
+
+function myFunction() {
+    document.getElementById("major").textContent = "I be from across t' computer science sea";
+}
+</script>
+
+<p id="interestingFact" onclick="myFunction()">Click me to see interesting fact (innerHTML).</p> 
+
+<!-- runs the innerHTMLscript -->
+<script>
+function myFunction() {
+    document.getElementById("interestingFact").innerHTML = "I enjoy speaking <strong>Chinese</strong> to me Captain";
+}
+</script>
+
+</body>
+</html>
